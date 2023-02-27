@@ -1,0 +1,118 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+:root {
+  --margin-left: 0px;
+  --margin-right: 0px;
+  --primary-color: #000000;
+  --secondary-color: #ffffff;
+  --accent-color: #b9babb95;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background-image: url("https://images.unsplash.com/photo-1448375240586-882707db888b?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzczMTUxMDQ&ixlib=rb-4.0.3&q=80");
+  background-size: cover;
+}
+
+.container {
+  height: 510px;
+  min-width: 380px;
+  color: var(--secondary-color);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border: 2px solid var(--accent-color);
+  border-radius: 20px;
+  position: relative;
+  z-index: 5;
+  padding-bottom: 60px;
+  background-color: #ffffff0a;
+  backdrop-filter: blur(13px);
+}
+
+.animatedCircle2 {
+  width: 80px;
+  display: none;
+  height: 80px;
+  background-image: linear-gradient(#ff87ff8b, #89fcfc83);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 3;
+  filter: blur(35px);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.container p {
+  margin: 0px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.container h2 {
+  font-size: 30px;
+  margin: 0;
+  margin-top: 15px;
+}
+
+.backgroundblur {
+  width: fit-content;
+  border-radius: 20px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.container input {
+  font-size: 20px;
+  color: white;
+  padding: 8px;
+  border: 2px solid var(--accent-color);
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+.submitBtn {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 20px;
+  margin-left: var(--margin-left);
+  margin-right: var(--margin-right);
+  border: none;
+  border-radius: 10px;
+  font-size: 19px;
+  padding: 8px;
+  color: var(--secondary-color);
+  background-color: #ff00ff;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.contentclass {
+  display: flex;
+  width: calc(100%);
+  padding-left: 30px;
+  padding-right: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 0.5rem;
+}

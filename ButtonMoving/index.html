@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Moving Button</title>
+		<link rel="stylesheet" href="index.css" class="cs" />
+	</head>
+	<body>
+        <div class="backgroundblur">
+            <div class="animatedCircle2" id='mousehover'></div>
+                <div class="container" id="contain">
+                <h2 >Nazloop - SignUp</h2>
+                <p>Enter Your Details Below</p>
+                <div class="contentclass">
+                    <label>Enter Name</label>
+                    <input type="text" name="name" id="name"/>
+                    <label>Enter Email</label>
+                    <input type="email" name="email" id="email" />
+                    <label>Enter Mobile No.</label>
+                    <input type="text" name="mobile" id="mobile" />
+                    <label>Enter Password</label>
+                    <input type="password" name="password" id="password" />
+                </div>
+                <button href="www.google.com" target="_blank" class="submitBtn" type="submit">Submit</div>
+            </div>
+        </div>
+	</body>
+
+	<script>
+        let circle = document.getElementById("mousehover");
+        let container = document.getElementById("contain");
+        container.addEventListener("mousemove", (e) => {
+            const { pageX, pageY } = e;
+            circle.style.display = "block";
+            circle.style.left = `${pageX}px`;
+            circle.style.top = `${pageY}px`;
+        });
+        container.addEventListener("mouseout", (e) => {
+            circle.style.display = "none";
+        });
+            
+        let btn = document.querySelector(".submitBtn");
+            btn.addEventListener("mouseover", (e) => {
+                let value = document.getElementById("email").value;
+                let value1 = document.getElementById("password").value;
+                let value2 = document.getElementById("name").value;
+                let value3 = document.getElementById("mobile").value;
+                if (value === "" || value1 === "" || value2 === "" || value3 === "") {
+                    let r = document.querySelector(":root");
+                    let rs = getComputedStyle(document.body);
+                    if (rs.getPropertyValue("--margin-right") == "210px") {
+                        r.style.setProperty("--margin-right", "0px");
+                        r.style.setProperty("--margin-left", "210px");
+                    } else {
+                        if (rs.getPropertyValue("--margin-left") == "210px") {
+                            r.style.setProperty("--margin-left", "0px");
+                            r.style.setProperty("--margin-right", "210px");
+                        } else {
+                            if (rs.getPropertyValue("--margin-left") == "210px") {
+                                r.style.setProperty("--margin-left", "0px");
+                                r.style.setProperty("--margin-right", "210px");
+                            } else {
+                                r.style.setProperty("--margin-left", "210px");
+                            }
+                        }
+                    }
+                }
+            });
+	</script>
+</html>
