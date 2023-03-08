@@ -1,0 +1,40 @@
+<!-- Naziya = 'naziya' -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Popup.css" class="css">
+</head>
+<body class="naziya">
+    
+    <div class="Autopopup">
+        <div class="contentbox">
+            <div class="content">
+                <div class="second">
+                    <h3 style="margin-top: 20px ; margin-bottom:15px;">Key Highlights</h3>
+                    <hr class="popupruler">
+                    <p><b>Theming</b><span><img src="ThemeIcon.png" width="16px"  style="padding-left: 5px;"> - now you can choose colors from 16 million color shades. (go to menu and click on red circle to choose)</p>
+                    <hr class="secondpopupruler">
+                    <p><b>Dark Mode</b><span><img src="moon(1).png" width="17px"  style="padding-left: 5px;"></span> - there is dark mode also. (click on moon button to switch dark mode, hover on some elements to see glow effect)</p>
+                    <div class="close">Ok</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const Autopopup = document.querySelector('.Autopopup');
+        const close = document.querySelector('.close')
+        window.onload = function() {
+            setTimeout(function(){
+                Autopopup.style.display = "block"
+            }, 10)
+        }
+        close.addEventListener('click', () => {
+            Autopopup.style.display = "none";
+        })
+    </script>
+</body>
+</html>

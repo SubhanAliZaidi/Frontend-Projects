@@ -1,0 +1,109 @@
+<!-- Naziya = 'naziya' -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sign Up</title>
+		<link rel="stylesheet" href="SignUp.css" />
+	</head>
+	<body>
+		<section class="showcase">
+			<!-- <video src="/background.mp4" autoplay muted loop></video> -->
+			<div class="text1">
+				<button class="themebutton">
+					<img class="themeicon" src="moon(1).png" width="28px" id="naziya5" />
+				</button>
+				<div class="overlay"></div>
+				<div class="wrapper">
+					<h2>Sign Up</h2>
+
+					<div class="rule"><hr class="ruler" /></div>
+					<form action="#" method="POST">
+						<div class="input-box">
+							<img
+								src="name-icon.png"
+								height="35"
+								id="one1"
+								style="margin-right: 20px"
+							/>
+							<input type="text" placeholder="Enter your name" required />
+						</div>
+						<div class="input-box">
+							<img
+								src="mail.png"
+								height="35"
+								id="one2"
+								style="margin-right: 20px"
+							/>
+							<input type="text" placeholder="Enter your email" required />
+						</div>
+						<div class="input-box">
+							<img
+								src="password-32-64.png"
+								height="35"
+								id="one3"
+								style="margin-right: 20px"
+							/>
+							<input type="password" placeholder="Create password" required />
+						</div>
+						<div class="input-box">
+							<img
+								src="phone.png"
+								height="35"
+								id="one4"
+								style="margin-right: 20px"
+							/>
+							<input type="number" placeholder="Mobie No." required />
+						</div>
+						<div class="input-box">
+							<img
+								src="city.png"
+								height="35"
+								id="one5"
+								style="margin-right: 20px"
+							/>
+							<input type="text" placeholder="City" required />
+						</div>
+						<div class="policy">
+							<input type="checkbox" />
+							<h3>I accept all terms & condition</h3>
+						</div>
+						<div class="input-box button">
+							<input type="Submit" value="Sign Up" />
+						</div>
+						<div class="text">
+							<pre
+								class="texth3"
+							>Already have an account?<a href="#" class="login"> Login Here</a></pre>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+	</body>
+
+	<script>
+		var naziya5 = document.getElementById("naziya5");
+
+		naziya5.onclick = function () {
+			document.body.classList.toggle("buttontheme");
+			if (document.body.classList.contains("buttontheme")) {
+				naziya5.src = "sun.png";
+				one1.src = "name-icon1.png";
+				one2.src = "mail1.png";
+				one3.src = "password-32-641.png";
+				one4.src = "phone1.png";
+				one5.src = "city1.png";
+			} else {
+				naziya5.src = "moon(1).png";
+				one1.src = "name-icon.png";
+				one2.src = "mail.png";
+				one3.src = "password-32-64.png";
+				one4.src = "phone.png";
+				one5.src = "city.png";
+			}
+		};
+	</script>
+</html>
