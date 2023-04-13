@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+	--primary-text-color: white;
+	--secondary-text-color: #fff;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.header{
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    z-index: 15;
+    top: 0;
+    position: absolute;
+	left: 0;
+	width: 100%;
+	padding: 40px 70px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 99999;
+}
+
+
+header > .logo {
+	text-decoration: none;
+	color: var(--primary-text-color);
+	font-size: 2em;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font-weight: 700;
+}
+
+header ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header ul li {
+	list-style: none;
+	margin-left: 20px;
+}
+
+header ul li a {
+	text-decoration: none;
+	padding: 6px 15px;
+	color: var(--primary-text-color);
+	border-radius: 20px;
+	font-weight: 600;
+	font-size: 20px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+	background-color: white;
+	color: #2b1055;
+}
+
+.parent{
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+    scroll-snap-type: y proximity;
+}
+
+section{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    padding: 80px;
+    color: white;
+    scroll-snap-align: start;
+}
+
+.section1{
+    /* background-color: #00ff77; */
+    background-image: url("Assets/background4.webp");
+    background-size: cover;
+    text-transform: uppercase;
+    font-size: 60px;
+    letter-spacing: 25px;
+}
+.section2{
+    /* background-color: #ff0077; */
+    background-image: url("Assets/background3.webp");
+    background-size: cover;
+    text-transform: uppercase;
+    font-size: 60px;
+    letter-spacing: 25px;
+}
+.section3{
+    /* background-color: #ff7700; */
+    background-image: url("Assets/background2.webp");
+    background-size: cover;
+    text-transform: uppercase;
+    font-size: 60px;
+    letter-spacing: 25px;
+}
+.section4{
+    /* background-color: #77ff00; */
+    background-image: url("Assets/background1.webp");
+    background-size: cover;
+    text-transform: uppercase;
+    font-size: 60px;
+    letter-spacing: 25px;
+}
+
+.section5{
+    background-color: #00ff77;
+    height: fit-content;
+}
+
+.footer{
+    height: 100px;
+}
