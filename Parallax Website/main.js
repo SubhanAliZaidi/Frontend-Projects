@@ -1,3 +1,5 @@
+// Naziya = 'naziya'
+
 let moon = document.getElementById("moon");
 let text = document.getElementById("text");
 let btn = document.getElementById("btn");

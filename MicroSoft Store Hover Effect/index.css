@@ -1,10 +1,11 @@
+/* Naziya = 'naziya' */
 *{
     margin: 0;
     padding: 0;
 }
 
 :root{
-    --width:350px;
+    --width : 350px;
 }
 
 body{
@@ -32,6 +33,7 @@ body{
     transition: border 250ms;
 }
 
+
 .container:hover{
     border-color: #8000ff;
     transition: all 250ms;
@@ -58,7 +60,7 @@ body{
 
 .container:hover .grad{
     z-index: 1;
-    background-image: linear-gradient(to right ,rgba(0,0,0,0.767), transparent);
+    background-image: linear-gradient(to right,rgba(0, 0, 0, 0.767),transparent);
     aspect-ratio: 16/9;
     opacity: 1;
     transform: translateX(0%);
@@ -72,7 +74,7 @@ body{
     text-align: left;
     position: absolute;
     color: white;
-    left:10px;
+    left: 10px;
     transform: translateX(0%);
     opacity: 0;
     transition: all 0.3s ease-out;

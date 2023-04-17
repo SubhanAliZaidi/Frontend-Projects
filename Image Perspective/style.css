@@ -1,0 +1,148 @@
+*:not(h2){
+    margin: 0;
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 300px;
+    padding-left: 80px;
+    background: mediumvioletred;
+    z-index: -11;
+    position: absolute;
+    width: 94vw;
+}
+
+#myDIV {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	background-color: teal;
+    margin-left: -80px;
+    position: relative;
+    width: 200px;
+    perspective: 600px;
+    transition: all 300ms ease-in-out;
+}
+
+.content,.content3,.content4,.content5,.content6{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 10px;
+    text-align: justify;
+    color: white;
+    flex-direction: column;
+    background-image: linear-gradient(360deg, black,transparent);
+    height: 100%;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(350px);
+    transition: all 300ms ease;
+}
+
+* h2 {
+    text-transform: uppercase;
+    margin-bottom: 4px;
+} 
+
+* p {
+    margin-bottom: 12px;
+}
+
+.div2class{
+    background-image: url("Assets/image1.webp");
+    overflow: hidden;
+}
+
+.div2class:hover .content{
+    transform: translateY(-15px);
+    opacity: 1;
+    transition: all 300ms ease;
+}
+
+.div3class{
+    background-image: url("Assets/image2.webp");
+    overflow: hidden;
+}
+
+.div3class:hover .content3{
+    transform: translateY(-15px);
+    opacity: 1;
+    transition: all 300ms ease;
+}
+
+.div4class{
+    background-image: url("Assets/image3.webp");
+    overflow: hidden;
+}
+
+.div4class:hover .content4{
+    transform: translateY(-15px);
+    opacity: 1;
+    transition: all 300ms ease;
+}
+
+.div5class{
+    background-image: url("Assets/image4.webp");
+    overflow: hidden;
+}
+
+.div5class:hover .content5{
+    transform: translateY(-15px);
+    opacity: 1;
+    transition: all 300ms ease;
+}
+
+.div6class{
+    background-image: url("Assets/image5.webp");
+    overflow: hidden;
+}
+
+.div6class:hover .content6{
+    transform: translateY(-15px);
+    opacity: 1;
+    transition: all 300ms ease;
+}
+
+.div2class,.div3class,.div4class,.div5class,.div6class{
+    width: 200px;
+    aspect-ratio: 9/16;
+    position: absolute;
+    transition: all 600ms ease;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.div2class,.div3class{
+    transform: rotateY(40deg);
+}
+
+.div5class,.div6class{
+    transform: rotateY(-40deg);
+}
+
+#minusindexing{
+    z-index: -5 ;
+}
+
+#minusindexing1{
+    z-index: -6 ;
+}
+
+#minusindexing0{
+    transition: all 300ms ease-in;
+}
+
+#myDIV:nth-of-type(n+1):hover{
+    margin-right: 80px;
+    margin-left: 0px;
+    transition: all 300ms ease-in-out;
+} 
+
+.heading{
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
