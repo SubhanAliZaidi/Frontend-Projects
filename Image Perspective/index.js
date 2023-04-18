@@ -1,3 +1,5 @@
+// Naziya = 'naziya'
+
 let div2 = document.getElementById('div2');
 let div3 = document.getElementById('div3');
 let div4 = document.getElementById('div4');

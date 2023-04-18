@@ -1,0 +1,162 @@
+/* Naziya = 'naziya' */
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.wrapper {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	gap: 1rem;
+}
+
+
+.child:nth-child(n + 1) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+	width: 50px;
+	height: 500px;
+	border-radius: 25px;
+	transition: width 400ms ease-in;
+}
+
+.child{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    align-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: white;
+    padding-block: 14px;
+}
+
+.child:nth-of-type(1) {
+    background-image: url("Assets/image1.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.child:nth-of-type(2) {
+    background-image: url("Assets/image2.jpg");
+	background-size: cover;
+    background-position: center center;
+}
+
+.child:nth-of-type(3) {
+	background-image: url("Assets/image3.jpg");
+	background-size: cover;
+    background-position: center center;
+}
+
+.child:nth-of-type(4) {
+	background-image: url("Assets/image4.jpg");
+	background-size: cover;
+    background-position: center center;
+}
+
+.child:nth-of-type(5) {
+	background-image: url("Assets/image5.jpg");
+	background-size: cover;
+    background-position: center center;
+}
+
+.child:nth-of-type(6) {
+	background-image: url("Assets/image6.jpg");
+	background-size: cover;
+    background-position: center center;
+}
+
+.round{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: transparent;
+    padding: 2px;
+    outline: 3px solid white;
+    margin-left: 15px;
+}
+
+.circle{
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.text-content{
+    position: relative;
+    bottom: -20px;
+    left: 11px;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    transition: all 400ms ease-in;
+}
+
+.text-content h2{
+    text-transform: uppercase;
+}
+
+#child1:hover .text-content{
+    bottom: 0px;
+    left: 20px;
+    transform: rotate(0deg);
+    transition: all 400ms ease-in 100ms;
+}
+ 
+#child2:hover .text-content{
+    bottom: 0px;
+    left: 20px;
+    transform: rotate(0deg);
+    transition: all 400ms ease-in 100ms;
+}
+
+#child3:hover .text-content{
+    bottom: 0px;
+    left: 20px;
+    transform: rotate(0deg);
+    transition: all 400ms ease-in 100ms;
+}
+
+#child4:hover .text-content{
+    bottom: 0px;
+    left: 20px;
+    transform: rotate(0deg);
+    transition: all 400ms ease-in 100ms;
+}
+
+#child5:hover .text-content{
+    bottom: 0px;
+    left: 20px;
+    transform: rotate(0deg);
+    transition: all 400ms ease-in 100ms;
+}
+
+#child6:hover .text-content{
+    bottom: 0px;
+    left: 20px;
+    transform: rotate(0deg);
+    transition: all 400ms ease-in 100ms;
+}
+
+
+
+
+
+
+
+
