@@ -1,0 +1,33 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.circle {
+	width: 50px;
+	aspect-ratio: 1/1;
+	background-image: linear-gradient(to bottom, crimson 50%, black 50%);
+	border-radius: 50%;
+	position: fixed;
+	left: 10px;
+	bottom: 10px;
+	z-index: 99;
+}
+
+.content {
+	min-height: 500vh;
+	position: relative;
+	height: fit-content;
+	text-align: center;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+	font-size: 3rem;
+}
+
+.content div {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
