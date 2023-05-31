@@ -1,0 +1,39 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+body > h1{
+  margin: 20px 0px 10px 0px;
+  text-transform: uppercase;
+}
+
+.container {
+  width: 900px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 300px;
+  max-width: 300px;
+  background-color: coral;
+}
+
+.side-card-container {
+  display: flex;
+}
+
