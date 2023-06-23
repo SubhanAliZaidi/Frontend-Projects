@@ -1,0 +1,146 @@
+*:is(::after, *, ::before) {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	cursor: default;
+}
+
+@mixin flex($flex, $align, $justify, $direction, $gap) {
+	display: $flex;
+	align-items: $align;
+	justify-content: $justify;
+	flex-direction: $direction;
+	gap: $gap;
+}
+
+$sidebar-width: 50px;
+$sidebar-content-width: 25px;
+$accent-color: crimson;
+
+body {
+	background-color: white;
+}
+
+.sidebar {
+	height: 100vh;
+	width: $sidebar-width;
+	position: fixed;
+	padding-block: 15px;
+	@include flex(flex, flex-start, space-between, column, 0px);
+	background-color: rgb(235, 219, 219);
+	transition: width 500ms ease;
+	overflow: hidden;
+  user-select: none;
+
+	.parent-elements {
+		color: black;
+		width: $sidebar-width;
+		@include flex(flex, flex-start, flex-start, column, 5px);
+
+		.full {
+			width: calc($sidebar-width + 110px) ;
+			display: grid;
+			align-items: flex-start;
+			gap: 6px;
+		}
+
+		h1 {
+			font-size: 2.4rem;
+			margin-top: -10px;
+      margin-left: -4px;
+			color: $accent-color;
+		}
+
+		.elements {
+			display: flex;
+			flex-direction: row;
+			gap: 15px;
+			height: 30px;
+			text-decoration: none;
+			color: black;
+			align-items: center;
+			padding: calc(($sidebar-width - $sidebar-content-width) / 2);
+      
+			svg {
+				width: 20px;
+			}
+
+      #firstimage{
+        width: 22px;
+        margin-left: -1px;
+        margin-bottom: 2px;
+      }
+
+			span {
+				opacity: 0;
+				translate: 80%;
+				transition: all 500ms ease;
+			}
+      
+			&:not(#firstchild):hover {
+        border-right: 2px solid $accent-color;
+			}
+
+      &:hover svg{
+        fill: crimson;
+        transition: fill 300ms ease;
+      }
+		}
+
+		#firstchild {
+			gap: 0px;
+			margin-bottom: 15px;
+			font-size: 1.7rem;
+		}
+	}
+
+	&:hover {
+		width: calc($sidebar-width + 110px);
+		transition: width 500ms ease;
+    overflow-y: auto;
+
+		.elements span {
+			opacity: 1;
+			translate: 0%;
+			transition: all 500ms ease;
+		}
+
+	}
+}
+
+::selection {
+	background-color: $accent-color;
+  color:white;
+}
+
+.body {
+	@include flex(flex, center, center, column, 0px);
+	width: calc(100% - $sidebar-width);
+	padding: 15px 20px;
+	margin-left: $sidebar-width;
+
+	* {
+		@include flex(flex, center, center, column, 0px);
+		text-align: justify;
+	}
+
+	section {
+		width: calc(100% - 30%);
+		max-width: 800px;
+
+		h1 {
+			font-size: 40px;
+			text-align: center;
+			margin-bottom: 0.75em;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.body {
+		section {
+			width: calc(100% - 10%);
+			min-width: calc(100% - 5%);
+		}
+	}
+}

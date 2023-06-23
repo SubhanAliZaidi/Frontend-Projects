@@ -1,0 +1,61 @@
+// Naziya = 'naziya'
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+$container-width: 500px;
+$card-width: 250px;
+
+@mixin flex {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+@mixin h1($fsize, $color, $margin){
+  font-size: $fsize;
+  color: $color;
+  margin: $margin
+}
+
+body {
+	background-color: chocolate;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  flex-direction: column;
+
+	h1 {
+		margin: 20px 0px 10px 0px;
+		text-transform: uppercase;
+    @include h1(30px,white,20px);
+	}
+}
+
+.parent-container {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+
+	.container {
+		@include flex;
+		max-width: $container-width;
+		padding-block: 30px;
+
+		.card {
+			background-color: rgb(255, 176, 147);
+			padding: 20px;
+			border-radius: 10px;
+			max-width: $card-width;
+			text-align: justify;
+			text-transform: capitalize;
+
+			&:is(:focus, :hover) {
+				outline: 2px solid red;
+			}
+		}
+	}
+}

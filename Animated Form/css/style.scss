@@ -1,0 +1,161 @@
+// Naziya = 'naziya'
+*:is(::before, ::after, *) {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: white;
+  user-select: none;
+}
+
+@mixin flex($flex, $direction, $align, $justify, $gap) {
+	display: $flex;
+	flex-direction: $direction;
+	align-items: $align;
+	justify-content: $justify;
+	gap: $gap;
+}
+
+$wrapper-width: 750px;
+$wrapper-height: 500px;
+$animation-time: 700ms;
+$accent-color: crimson;
+
+body {
+	background-color: white;
+	height: 100vh;
+	@include flex(flex, column, center, center, 0px);
+}
+
+.wrapper {
+	width: $wrapper-width;
+	height: $wrapper-height;
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0px 0px 50px #4949497d;
+	overflow: hidden;
+	@include flex(flex, row-reverse, center, space-between, 0px);
+	position: relative;
+
+	h1 {
+		font-size: 2rem;
+		text-transform: uppercase;
+	}
+
+	p {
+		max-width: 250px;
+		text-align: center;
+    text-transform: capitalize;
+	}
+
+	.colorbox,
+	.whitebox,
+	.transparentbox,
+	.transparentbox1 {
+		height: 100%;
+		width: calc($wrapper-width / 2);
+		background-color: $accent-color;
+		@include flex(flex, column, center, center, 10px);
+		padding: 20px;
+		position: absolute;
+	}
+
+	.whitebox {
+		background-color: #fff;
+		right: 0;
+		transition: right $animation-time ease-in-out;
+
+		* {
+			color: black;
+		}
+
+		div {
+			@include flex(flex, row, center, center, 10px);
+
+			img {
+				width: 30px;
+				aspect-ratio: 1/1;
+				border-radius: 50vw;
+
+				&:is(:hover, :focus) {
+          animation: rotation 1000ms linear alternate;
+				}
+
+        @keyframes rotation {
+          25%{
+            rotate: 20deg;
+          }
+          50%{
+            rotate: 0deg;
+          }
+          75%{
+            rotate: -20deg;
+          }
+          100%{
+            rotate: 0deg;
+          }
+        }
+			}
+		}
+
+		input {
+			padding: 10px 10px;
+			border: none;
+			width: calc(100% - 100px);
+			border-radius: 4px;
+			background-color: rgb(219, 219, 219);
+
+			&:is(:focus, :active) {
+				outline: 2px solid $accent-color;
+			}
+		}
+
+		.submitbtn {
+      margin-top: 10px;
+			padding: 10px 25px;
+			background-color: $accent-color;
+			border: none;
+			border-radius: 50vw;
+			color: white;
+			text-transform: uppercase;
+
+			&:active {
+				background-color: rgb(196, 17, 53);
+			}
+		}
+	}
+
+	.colorbox {
+		left: 0;
+		transition: left $animation-time ease-in-out;
+
+		.transparentbox {
+			background-color: transparent;
+			position: absolute;
+			z-index: 1;
+			left: 0;
+			opacity: 1;
+			transition: all $animation-time ease-in-out;
+		}
+	}
+
+	.transparentbox1 {
+		background-color: transparent;
+		z-index: -1;
+		opacity: 0;
+		right: -30%;
+		transition: all calc($animation-time) ease-in-out;
+	}
+
+	.signup,
+	.signin {
+    margin-top: 10px;
+		background-color: transparent;
+		outline: 2px solid white;
+		padding: 10px 25px;
+		border-radius: 50vw;
+		border: none;
+		color: white;
+		text-transform: uppercase;
+		font-size: 1em;
+	}
+}

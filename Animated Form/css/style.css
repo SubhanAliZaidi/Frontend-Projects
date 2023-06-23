@@ -1,0 +1,148 @@
+*:is(::before, ::after, *) {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+body {
+  background-color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+}
+
+.wrapper {
+  width: 750px;
+  height: 500px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 50px rgba(73, 73, 73, 0.4901960784);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0px;
+  position: relative;
+}
+.wrapper h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.wrapper p {
+  max-width: 250px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.wrapper .colorbox,
+.wrapper .whitebox,
+.wrapper .transparentbox,
+.wrapper .transparentbox1 {
+  height: 100%;
+  width: 375px;
+  background-color: crimson;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  position: absolute;
+}
+.wrapper .whitebox {
+  background-color: #fff;
+  right: 0;
+  transition: right 700ms ease-in-out;
+}
+.wrapper .whitebox * {
+  color: black;
+}
+.wrapper .whitebox div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.wrapper .whitebox div img {
+  width: 30px;
+  aspect-ratio: 1/1;
+  border-radius: 50vw;
+}
+.wrapper .whitebox div img:is(:hover, :focus) {
+  animation: rotation 1000ms linear alternate;
+}
+@keyframes rotation {
+  25% {
+    rotate: 20deg;
+  }
+  50% {
+    rotate: 0deg;
+  }
+  75% {
+    rotate: -20deg;
+  }
+  100% {
+    rotate: 0deg;
+  }
+}
+.wrapper .whitebox input {
+  padding: 10px 10px;
+  border: none;
+  width: calc(100% - 100px);
+  border-radius: 4px;
+  background-color: rgb(219, 219, 219);
+}
+.wrapper .whitebox input:is(:focus, :active) {
+  outline: 2px solid crimson;
+}
+.wrapper .whitebox .submitbtn {
+  margin-top: 10px;
+  padding: 10px 25px;
+  background-color: crimson;
+  border: none;
+  border-radius: 50vw;
+  color: white;
+  text-transform: uppercase;
+}
+.wrapper .whitebox .submitbtn:active {
+  background-color: rgb(196, 17, 53);
+}
+.wrapper .colorbox {
+  left: 0;
+  transition: left 700ms ease-in-out;
+}
+.wrapper .colorbox .transparentbox {
+  background-color: transparent;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  opacity: 1;
+  transition: all 700ms ease-in-out;
+}
+.wrapper .transparentbox1 {
+  background-color: transparent;
+  z-index: -1;
+  opacity: 0;
+  right: -30%;
+  transition: all 700ms ease-in-out;
+}
+.wrapper .signup,
+.wrapper .signin {
+  margin-top: 10px;
+  background-color: transparent;
+  outline: 2px solid white;
+  padding: 10px 25px;
+  border-radius: 50vw;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1em;
+}/*# sourceMappingURL=style.css.map */

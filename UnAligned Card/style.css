@@ -1,0 +1,41 @@
+/* Naziya = 'naziya' */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+body > h1{
+  margin: 20px 0px 10px 0px;
+  text-transform: uppercase;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 600px;
+  padding: 30px;
+  resize: horizontal;
+}
+
+.card {
+  background-color: coral;
+  max-width: 250px;
+  padding: 20px;
+  border-radius: 10px;
+  resize: both;
+  height: 100%;
+}
+
+.card:is(:focus, :hover){
+  outline: 1px solid black;
+}

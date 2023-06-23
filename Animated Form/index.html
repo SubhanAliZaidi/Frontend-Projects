@@ -1,0 +1,47 @@
+<!-- Naziya = 'naziya' -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./css/style.css" class="css" />
+		<script src="./main.js" defer></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<form class="whitebox" request="POST">
+				<h1>Create Account</h1>
+        <p style="color:rgb(170, 170, 170); font-size:14px;">---With---</p>
+				<div>
+					<img src="./Assets/icon/facebook.png" alt="" />
+					<img src="./Assets/icon/twitter.png" alt="" />
+					<img src="./Assets/icon/github.png" alt="" />
+					<img src="./Assets/icon/linkedin.png" alt="" />
+				</div>
+        <p style="color:rgb(170, 170, 170); font-size:14px;">---Or---</p>
+				<p>Use your Mail for registration</p>
+				<input type="text" placeholder="Name" spellcheck="false" name="name" required/>
+				<input type="email" placeholder="Email" spellcheck="false" name="email" required/>
+				<input type="password" placeholder="Password" spellcheck="false" name="password" required/>
+
+				<button type="submit" class="submitbtn">Submit</button>
+			</form>
+
+			<div class="transparentbox1" id="transparentbox1">
+				<h1>hello, friend!</h1>
+				<p>Enter Your personal details and start journey with us</p>
+				<button onclick="formchange()" class="signup">sign up</button>
+			</div>
+
+			<div class="colorbox">
+				<div class="transparentbox" id="transparentbox">
+					<h1>Welcome Back!</h1>
+					<p>To keep connected with us please login with your personal info</p>
+					<button onclick="formchange()" class="signin">log in</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

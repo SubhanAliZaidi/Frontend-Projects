@@ -1,0 +1,139 @@
+*:is(::after, *, ::before) {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+body {
+  background-color: white;
+}
+
+.sidebar {
+  height: 100vh;
+  width: 50px;
+  position: fixed;
+  padding-block: 15px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 0px;
+  background-color: rgb(235, 219, 219);
+  transition: width 500ms ease;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.sidebar .parent-elements {
+  color: black;
+  width: 50px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 5px;
+}
+.sidebar .parent-elements .full {
+  width: 160px;
+  display: grid;
+  align-items: flex-start;
+  gap: 6px;
+}
+.sidebar .parent-elements h1 {
+  font-size: 2.4rem;
+  margin-top: -10px;
+  margin-left: -4px;
+  color: crimson;
+}
+.sidebar .parent-elements .elements {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  height: 30px;
+  text-decoration: none;
+  color: black;
+  align-items: center;
+  padding: 12.5px;
+}
+.sidebar .parent-elements .elements svg {
+  width: 20px;
+}
+.sidebar .parent-elements .elements #firstimage {
+  width: 22px;
+  margin-left: -1px;
+  margin-bottom: 2px;
+}
+.sidebar .parent-elements .elements span {
+  opacity: 0;
+  translate: 80%;
+  transition: all 500ms ease;
+}
+.sidebar .parent-elements .elements:not(#firstchild):hover {
+  border-right: 2px solid crimson;
+}
+.sidebar .parent-elements .elements:hover svg {
+  fill: crimson;
+  transition: fill 300ms ease;
+}
+.sidebar .parent-elements #firstchild {
+  gap: 0px;
+  margin-bottom: 15px;
+  font-size: 1.7rem;
+}
+.sidebar:hover {
+  width: 160px;
+  transition: width 500ms ease;
+  overflow-y: auto;
+}
+.sidebar:hover .elements span {
+  opacity: 1;
+  translate: 0%;
+  transition: all 500ms ease;
+}
+
+::-moz-selection {
+  background-color: crimson;
+  color: white;
+}
+
+::selection {
+  background-color: crimson;
+  color: white;
+}
+
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0px;
+  width: calc(100% - 50px);
+  padding: 15px 20px;
+  margin-left: 50px;
+}
+.body * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0px;
+  text-align: justify;
+}
+.body section {
+  width: 70%;
+  max-width: 800px;
+}
+.body section h1 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 0.75em;
+}
+
+@media (max-width: 500px) {
+  .body section {
+    width: 90%;
+    min-width: 95%;
+  }
+}/*# sourceMappingURL=style.css.map */
