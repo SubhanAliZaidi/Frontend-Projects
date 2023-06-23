@@ -1,3 +1,4 @@
+// Naziya = 'naziya'
 let circle = document.getElementById('circle')
 document.addEventListener('mousemove' , (e) => {
     const {pageX, pageY} = e;
